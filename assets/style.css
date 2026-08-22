@@ -106,8 +106,8 @@ img {
   flex-direction: column;
   font-family: var(--font-heading);
   color: var(--color-bg-white);
-  line-height: 1.4;
-  padding: 10px 22px;
+  line-height: 1;
+  padding: 12px 22px;
   border-radius: 16px;
   background-color: rgba(22, 18, 66, 0.55);
   backdrop-filter: blur(6px);
@@ -118,6 +118,9 @@ img {
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 0.05em;
+  line-height: 1;
+  /* Sekuya は文字上部の内部余白が大きいため、上に詰めて視覚的に中央へ */
+  margin: -0.18em 0 0;
 }
 
 .header-subtitle {
@@ -125,6 +128,8 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.9;
+  line-height: 1;
+  margin: 6px 0 -0.05em;
 }
 
 /* 右側：ハンバーガーボタン */
@@ -285,15 +290,15 @@ body.nav-open {
 .fv-deco-star-left {
   top: 22%;
   left: 12%;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   animation-delay: 1.5s;
 }
 .fv-deco-star-right {
   top: 18%;
   right: 15%;
-  width: 55px;
-  height: 55px;
+  width: 46px;
+  height: 46px;
 }
 
 /* 星空コンテナ */
@@ -342,13 +347,13 @@ body.nav-open {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 140px;
+  margin-bottom: 110px;
 
 }
 
 .fv-moon {
-  width: 90vw;
-  max-width: 500px;
+  width: 82vw;
+  max-width: 430px;
   aspect-ratio: 1 / 1;
   background-image: url('images/fv_monn.webp');
   background-size: contain;
@@ -363,8 +368,8 @@ body.nav-open {
 
 .fv-human-sheep-btn {
   position: absolute;
-  width: 120vw; 
-  max-width: 560px; 
+  width: 100vw;
+  max-width: 485px;
   z-index: 4;
   opacity: 0;
   transform: translateY(60px);
@@ -466,13 +471,13 @@ body.nav-open {
 /* キャッチコピー */
 .fv-catchphrase {
   font-family: var(--font-fv);
-  font-size: 2.4rem;
+  font-size: 2.05rem;
   letter-spacing: 0.24em;
   color: var(--color-bg-white);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -80px;
   /* margin-bottom: 100px; */
   opacity: 0;
   transform: translateY(20px);
