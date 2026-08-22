@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="KatoFuka_Portfolio_Site">
+  <title>Kato Fuka Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/splide.min.css">
+  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/scripts/main.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-title-mobaile">
+      <a href="index.html">
+        <p>Kato Fuka</p>
+        <span class="header-subtitle">Portfolio</span>
+      </a>
+    </div>
+
+    <button type="button" class="open-btn01" id="openBtn01" aria-label="メニューを開く" aria-expanded="false" aria-controls="g-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+    <nav id="g-nav">
+      <div id="g-nav-list">
+        <ul>
+          <li><a href="#top">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    
+  <section id="top" class="fv-section">
+    <div class="fv-stars"></div>
+    
+    <div class="fv-deco-star-left"></div>
+    <div class="fv-deco-star-right"></div>
+    
+    <div class="fv-center-group">
+      <div class="fv-moon"></div>
+
+      <button type="button" class="fv-human-sheep-btn" data-open-works-modal aria-label="作品一覧を見る">
+        <img src="assets/images/fv_human_sheep.webp" alt="Sheep Rider" class="fv-human-sheep">
+      </button>
+
+      <button type="button" class="fv-click-badge" data-open-works-modal aria-label="作品一覧を見る">
+        <img src="assets/images/cloud.webp" alt="" class="fv-click-cloud-img" loading="lazy" decoding="async">
+        <span class="fv-click-bubble-text">CLICK!</span>
+      </button>
+    </div>
+
+    <h3 class="fv-catchphrase">夢の景色をカタチにする</h3>
+
+    <div class="scroll-badge">
+      <div class="scroll-badge-text"></div>
+      <i class="fa-solid fa-arrow-down scroll-badge-arrow"></i>
+    </div>
+
+    <div class="fv-clouds-container">
+      <div class="fv-cloud-purple"></div>
+      <div class="fv-cloud-white"></div>
+    </div>
+
+    <img src="assets/images/fv_sheep.webp" alt="Sleeping Sheep" class="fv-bottom-sheep">
+  </section>
+
+  <div class="main-content-wrap">
+
+    <section id="about" class="container about-section fade-in-up">
+      <h2 class="section-title">About</h2>
+      
+      <div class="book-outer-container">
+        <div class="page-left-base">
+          <div class="page-inner-content left-page-text">
+            <h3 class="about-text-lead">Profile</h3>
+            <p class="about-text-desc">
+              はじめまして。加藤風香と申します。<br>
+              私は、イラストやデザインを通して頭の中にある景色を形にすることが好きです。
+              まだ見ぬアイデアや想いを整理し、誰かの心に届くデザインを志しています。
+            </p>
+          </div>
+        </div>
+        
+        <div class="page-right-base"></div>
+        
+        <div class="book" id="aboutBook">
+          
+          <div class="book-sheet" id="sheet-1" style="z-index: 5;">
+            <div class="sheet-face sheet-front">
+              <div class="page-illust-container">
+                <img src="assets/images/about_01.webp" alt="About Illustration 1" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="sheet-face sheet-back">
+              <div class="page-inner-content">
+                <div>
+                  <h3 class="about-text-lead">想像の景色を<br>誰かの心に届く形へ</h3>
+                  <p class="about-text-desc">
+                    現実と空想のあいだにあるようなワクワクする世界観が好きです。<br>
+                    見る人の心が動くような体験を届けられるよう、日々デザインを学び続けています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-sheet" id="sheet-2" style="z-index: 4;">
+            <div class="sheet-face sheet-front">
+              <div class="page-illust-container">
+                <img src="assets/images/about_02.webp" alt="About Illustration 2" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="sheet-face sheet-back">
+              <div class="page-inner-content">
+                <div>
+                  <p class="about-text-desc">
+                    まだ見ぬアイデアや想いを形にし、人と人とをつなぐデザインを目指します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-sheet" id="sheet-3" style="z-index: 3;">
+            <div class="sheet-face sheet-front">
+              <div class="page-illust-container">
+                <img src="assets/images/about_03.webp" alt="About Illustration 3" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="sheet-face sheet-back">
+              <div class="page-inner-content">
+                <div>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="book-controls">
+        <!-- ▼ 追加：最初のページへ戻るボタン ▼ -->
+        <button class="book-btn" id="firstBtn" aria-label="最初のページ">
+          <i class="fa-solid fa-angles-left"></i>
+        </button>
+        
+        <button class="book-btn" id="prevBtn" aria-label="前のページ">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <a href="about.html" class="more-about-btn">
+          More About <i class="fa-solid fa-play"></i>
+        </a>
+        
+        <button class="book-btn" id="nextBtn" aria-label="次のページ">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- ▼ 追加：最後のページへ進むボタン ▼ -->
+        <button class="book-btn" id="lastBtn" aria-label="最後のページ">
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </div>
+
+      <!-- ▼ レスポンシブ時のみ表示：めくらないスライドショー ▼ -->
+      <div class="about-slider" id="aboutSlider">
+        <div class="about-slider-viewport">
+          <button type="button" class="about-slider-arrow about-slider-prev" aria-label="前へ">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="about-slider-window">
+          <div class="about-slider-track" id="aboutSliderTrack">
+            <div class="about-slide">
+              <div class="about-slide-text">
+                <h3 class="about-text-lead">Profile</h3>
+                <p class="about-text-desc">
+                  はじめまして。加藤風香と申します。<br>
+                  私は、イラストやデザインを通して頭の中にある景色を形にすることが好きです。まだ見ぬアイデアや想いを整理し、誰かの心に届くデザインを志しています。
+                </p>
+              </div>
+              <div class="about-slide-illust">
+                <img src="assets/images/about_01.webp" alt="About Illustration 1" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <div class="about-slide">
+              <div class="about-slide-text">
+                <h3 class="about-text-lead">想像の景色を<br>誰かの心に届く形へ</h3>
+                <p class="about-text-desc">
+                  現実と空想のあいだにあるようなワクワクする世界観が好きです。見る人の心が動くような体験を届けられるよう、日々デザインを学び続けています。
+                </p>
+              </div>
+              <div class="about-slide-illust">
+                <img src="assets/images/about_02.webp" alt="About Illustration 2" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <div class="about-slide">
+              <div class="about-slide-text">
+                <h3 class="about-text-lead">まだ見ぬ想いを、<br>カタチに</h3>
+                <p class="about-text-desc">
+                  まだ見ぬアイデアや想いを形にし、人と人とをつなぐデザインを目指します。
+                </p>
+              </div>
+              <div class="about-slide-illust">
+                <img src="assets/images/about_03.webp" alt="About Illustration 3" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <button type="button" class="about-slider-arrow about-slider-next" aria-label="次へ">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="about-slider-dots" id="aboutSliderDots">
+          <button type="button" class="about-slider-dot active" data-index="0" aria-label="1ページ目"></button>
+          <button type="button" class="about-slider-dot" data-index="1" aria-label="2ページ目"></button>
+          <button type="button" class="about-slider-dot" data-index="2" aria-label="3ページ目"></button>
+        </div>
+
+        <a href="about.html" class="more-about-btn about-slider-more">
+          More About <i class="fa-solid fa-play"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="skill" class="skill-section fade-in-up">
+      <div class="container">
+        <h2 class="section-title">Skill</h2>
+        
+        <div class="skill-tabs">
+          <button class="skill-tab-btn active" data-tab="graphic">Graphic</button>
+          <button class="skill-tab-btn" data-tab="coding">Coding</button>
+          <button class="skill-tab-btn" data-tab="ai">AI</button>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-list" id="skillList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="works-section fade-in-up">
+      <div class="container">
+        <h2 class="section-title">Works</h2>
+
+        <div class="works-cat-tabs">
+          <button type="button" class="works-cat-tab active" data-works-cat="web">Web</button>
+          <button type="button" class="works-cat-tab" data-works-cat="graphic">Graphic</button>
+        </div>
+
+        <div class="works-carousel-container">
+          <div class="works-track" id="worksTrack">
+
+  <a href="work_oiseau.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_oiseau.webp" alt="L'Oiseau Bleu &amp; Beauty Art Curious" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">L'Oiseau Bleu &amp; Beauty Art Curious</h3>
+    </div>
+  </a>
+
+  <a href="work_kd.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_kd.webp" alt="K&amp;D" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">K&amp;D</h3>
+    </div>
+  </a>
+
+  <a href="work_corporate.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_corporate.webp" alt="コーポレートサイト" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">コーポレートサイト</h3>
+    </div>
+  </a>
+
+  <a href="work_hospital.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_hospital.webp" alt="病院 TOPページ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">病院 TOPページ</h3>
+    </div>
+  </a>
+
+  <a href="work_salon.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_salon.webp" alt="美容院 TOPページ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">美容院 TOPページ</h3>
+    </div>
+  </a>
+
+  <a href="work_toyota.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_toyota.webp" alt="美術館 TOPページ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">美術館 TOPページ</h3>
+    </div>
+  </a>
+
+  <a href="work_coffee.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_coffee.webp" alt="珈琲通販アプリ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">珈琲通販アプリ</h3>
+    </div>
+  </a>
+
+  <a href="work_cooking.html" class="work-card" data-cat="web">
+    <div class="work-img-holder">
+      <img src="assets/images/works_cooking.webp" alt="料理アプリ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Web Design</span>
+      <h3 class="work-title">料理アプリ</h3>
+    </div>
+  </a>
+
+  <a href="work_soudankai.html" class="work-card" data-cat="graphic">
+    <div class="work-img-holder">
+      <img src="assets/images/works_soudankai.webp" alt="デジタル相談会/チラシ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Graphic Design</span>
+      <h3 class="work-title">デジタル相談会/チラシ</h3>
+    </div>
+  </a>
+
+  <a href="work_jazz.html" class="work-card" data-cat="graphic">
+    <div class="work-img-holder">
+      <img src="assets/images/works_jazz.webp" alt="ジャズコンサート/チラシ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Graphic Design</span>
+      <h3 class="work-title">ジャズコンサート/チラシ</h3>
+    </div>
+  </a>
+
+  <a href="work_poster.html" class="work-card" data-cat="graphic">
+    <div class="work-img-holder">
+      <img src="assets/images/works_poster.webp" alt="広告ポスター" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Graphic Design</span>
+      <h3 class="work-title">広告ポスター</h3>
+    </div>
+  </a>
+
+  <a href="work_package.html" class="work-card" data-cat="graphic">
+    <div class="work-img-holder">
+      <img src="assets/images/works_package.webp" alt="パッケージ" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Graphic Design</span>
+      <h3 class="work-title">パッケージ</h3>
+    </div>
+  </a>
+
+  <a href="work_logo.html" class="work-card" data-cat="graphic">
+    <div class="work-img-holder">
+      <img src="assets/images/works_logo.webp" alt="ロゴデザイン" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Graphic Design</span>
+      <h3 class="work-title">ロゴデザイン</h3>
+    </div>
+  </a>
+
+  <a href="work_osu.html" class="work-card" data-cat="graphic">
+    <div class="work-img-holder">
+      <img src="assets/images/works_festival.webp" alt="大須パレード/トラック看板" loading="lazy" decoding="async">
+    </div>
+    <div class="work-info">
+      <span class="work-cat">Graphic Design</span>
+      <h3 class="work-title">大須パレード/トラック看板</h3>
+    </div>
+  </a>
+
+</div>
+        </div>
+
+        <!-- ドットはJSで表示中カード数に応じて自動生成します -->
+        <div class="carousel-nav" id="carouselNav"></div>
+
+       <div class="more-works-btn-container">
+          <a href="works.html" class="more-about-btn">
+            More Works <i class="fa-solid fa-play"></i>
+          </a>
+        </div>
+      </div> </section> <section id="contact" class="contact-section">
+      <div class="contact-container fade-in-up">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-sub">お問い合わせはこちらから</p>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYCzQWVudSBpCsLizcKeSi63ZhIdLkGRVcIOSFJ_khoRYDtg/viewform?usp=publish-editor" class="contact-btn contact-btn-form">
+          <i class="fa-regular fa-envelope"></i> CONTACT FORM
+        </a>
+        <br>
+        <a href="https://www.instagram.com/karu.amilk/" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-insta">
+          <i class="fa-brands fa-instagram"></i> INSTAGRAM
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  </div>
+
+  <footer class="footer-wrap">
+    
+    <div class="container footer-content">
+      <div class="footer-nav">
+        <a href="#top">Top</a>
+        <a href="#about">About</a>
+        <a href="#skill">Skill</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="copyright">&copy; Kato Fuka.PortfolioSite</p>
+    </div>
+  </footer>  <div class="works-modal" id="worksModal" aria-hidden="true">
+    <div class="works-modal-overlay" data-modal-close></div>
+
+    <div class="works-modal-panel" role="dialog" aria-modal="true" aria-label="作品一覧">
+      <button type="button" class="works-modal-close" data-modal-close aria-label="閉じる">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <h3 class="works-modal-title">Works</h3>
+      <p class="works-modal-lead">クリックした作品の詳細ページへ移動します。</p>
+
+      <div class="works-modal-tabs" role="tablist">
+        <button type="button" class="works-cat-tab active" data-works-tab="web">Web</button>
+        <button type="button" class="works-cat-tab" data-works-tab="graphic">Graphic</button>
+      </div>
+
+      <!-- Web作品 -->
+      <div class="works-modal-grid" data-works-panel="web">
+        <a href="work_oiseau.html" class="works-modal-item">
+          <img src="assets/images/works_oiseau.webp" alt="L'Oiseau Bleu &amp; Beauty Art Curious" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">L'Oiseau Bleu &amp; Beauty Art Curious</span>
+        </a>
+        <a href="work_kd.html" class="works-modal-item">
+          <img src="assets/images/works_kd.webp" alt="K&amp;D" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">K&amp;D</span>
+        </a>
+        <a href="work_corporate.html" class="works-modal-item">
+          <img src="assets/images/works_corporate.webp" alt="コーポレートサイト" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">コーポレートサイト</span>
+        </a>
+        <a href="work_hospital.html" class="works-modal-item">
+          <img src="assets/images/works_hospital.webp" alt="病院 TOPページ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">病院 TOPページ</span>
+        </a>
+        <a href="work_salon.html" class="works-modal-item">
+          <img src="assets/images/works_salon.webp" alt="美容院 TOPページ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">美容院 TOPページ</span>
+        </a>
+        <a href="work_toyota.html" class="works-modal-item">
+          <img src="assets/images/works_toyota.webp" alt="美術館 TOPページ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">美術館 TOPページ</span>
+        </a>
+        <a href="work_coffee.html" class="works-modal-item">
+          <img src="assets/images/works_coffee.webp" alt="珈琲通販アプリ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">珈琲通販アプリ</span>
+        </a>
+        <a href="work_cooking.html" class="works-modal-item">
+          <img src="assets/images/works_cooking.webp" alt="料理アプリ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Web Design</span>
+          <span class="works-modal-item-title">料理アプリ</span>
+        </a>
+      </div>
+
+      <!-- Graphic作品（あとで最大10個まで追加。今は大須のみ） -->
+      <div class="works-modal-grid is-hidden" data-works-panel="graphic">
+        <a href="work_soudankai.html" class="works-modal-item">
+          <img src="assets/images/works_soudankai.webp" alt="デジタル相談会/チラシ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Graphic Design</span>
+          <span class="works-modal-item-title">デジタル相談会/チラシ</span>
+        </a>
+        <a href="work_jazz.html" class="works-modal-item">
+          <img src="assets/images/works_jazz.webp" alt="ジャズコンサート/チラシ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Graphic Design</span>
+          <span class="works-modal-item-title">ジャズコンサート/チラシ</span>
+        </a>
+        <a href="work_poster.html" class="works-modal-item">
+          <img src="assets/images/works_poster.webp" alt="広告ポスター" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Graphic Design</span>
+          <span class="works-modal-item-title">広告ポスター</span>
+        </a>
+        <a href="work_package.html" class="works-modal-item">
+          <img src="assets/images/works_package.webp" alt="パッケージ" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Graphic Design</span>
+          <span class="works-modal-item-title">パッケージ</span>
+        </a>
+        <a href="work_logo.html" class="works-modal-item">
+          <img src="assets/images/works_logo.webp" alt="ロゴデザイン" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Graphic Design</span>
+          <span class="works-modal-item-title">ロゴデザイン</span>
+        </a>
+        <a href="work_osu.html" class="works-modal-item">
+          <img src="assets/images/works_festival.webp" alt="大須パレード/トラック看板" loading="lazy" decoding="async">
+          <span class="works-modal-item-cat">Graphic Design</span>
+          <span class="works-modal-item-title">大須パレード/トラック看板</span>
+        </a>
+      </div>
+
+      <button type="button" class="works-modal-close-btn" data-modal-close>Close</button>
+    </div>
+  </div>
+
+</body>
+</html>
