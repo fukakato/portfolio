@@ -44,13 +44,13 @@
       </div>
     </nav>
 
-    
+  <main>
   <section id="top" class="fv-section">
     <div class="fv-stars"></div>
-    
+
     <div class="fv-deco-star-left"></div>
     <div class="fv-deco-star-right"></div>
-    
+
     <div class="fv-center-group">
       <div class="fv-moon"></div>
 
@@ -83,7 +83,7 @@
 
     <section id="about" class="container about-section fade-in-up">
       <h2 class="section-title">About</h2>
-      
+
       <div class="book-outer-container">
         <div class="page-left-base">
           <div class="page-inner-content left-page-text">
@@ -95,12 +95,12 @@
             </p>
           </div>
         </div>
-        
+
         <div class="page-right-base"></div>
-        
+
         <div class="book" id="aboutBook">
-          
-          <div class="book-sheet" id="sheet-1" style="z-index: 5;">
+
+          <div class="book-sheet" id="sheet-1">
             <div class="sheet-face sheet-front">
               <div class="page-illust-container">
                 <img src="assets/images/about_01.webp" alt="About Illustration 1" loading="lazy" decoding="async">
@@ -119,7 +119,7 @@
             </div>
           </div>
 
-          <div class="book-sheet" id="sheet-2" style="z-index: 4;">
+          <div class="book-sheet" id="sheet-2">
             <div class="sheet-face sheet-front">
               <div class="page-illust-container">
                 <img src="assets/images/about_02.webp" alt="About Illustration 2" loading="lazy" decoding="async">
@@ -136,7 +136,7 @@
             </div>
           </div>
 
-          <div class="book-sheet" id="sheet-3" style="z-index: 3;">
+          <div class="book-sheet" id="sheet-3">
             <div class="sheet-face sheet-front">
               <div class="page-illust-container">
                 <img src="assets/images/about_03.webp" alt="About Illustration 3" loading="lazy" decoding="async">
@@ -145,7 +145,7 @@
             <div class="sheet-face sheet-back">
               <div class="page-inner-content">
                 <div>
-              
+
                 </div>
               </div>
             </div>
@@ -155,30 +155,28 @@
       </div>
 
       <div class="book-controls">
-        <!-- ▼ 追加：最初のページへ戻るボタン ▼ -->
+
         <button class="book-btn" id="firstBtn" aria-label="最初のページ">
           <i class="fa-solid fa-angles-left"></i>
         </button>
-        
+
         <button class="book-btn" id="prevBtn" aria-label="前のページ">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
-        
+
         <a href="about.html" class="more-about-btn">
           More About <i class="fa-solid fa-play"></i>
         </a>
-        
+
         <button class="book-btn" id="nextBtn" aria-label="次のページ">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
 
-        <!-- ▼ 追加：最後のページへ進むボタン ▼ -->
         <button class="book-btn" id="lastBtn" aria-label="最後のページ">
           <i class="fa-solid fa-angles-right"></i>
         </button>
       </div>
 
-      <!-- ▼ レスポンシブ時のみ表示：めくらないスライドショー ▼ -->
       <div class="about-slider" id="aboutSlider">
         <div class="about-slider-viewport">
           <button type="button" class="about-slider-arrow about-slider-prev" aria-label="前へ">
@@ -246,7 +244,7 @@
     <section id="skill" class="skill-section fade-in-up">
       <div class="container">
         <h2 class="section-title">Skill</h2>
-        
+
         <div class="skill-tabs">
           <button class="skill-tab-btn active" data-tab="graphic">Graphic</button>
           <button class="skill-tab-btn" data-tab="coding">Coding</button>
@@ -414,7 +412,6 @@
 </div>
         </div>
 
-        <!-- ドットはJSで表示中カード数に応じて自動生成します -->
         <div class="carousel-nav" id="carouselNav"></div>
 
        <div class="more-works-btn-container">
@@ -426,7 +423,7 @@
       <div class="contact-container fade-in-up">
         <h2 class="section-title">Contact</h2>
         <p class="contact-sub">お問い合わせはこちらから</p>
-        
+
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYCzQWVudSBpCsLizcKeSi63ZhIdLkGRVcIOSFJ_khoRYDtg/viewform?usp=publish-editor" class="contact-btn contact-btn-form">
           <i class="fa-regular fa-envelope"></i> CONTACT FORM
         </a>
@@ -439,10 +436,10 @@
 
   </div>
 
-  </div>
+  </main>
 
   <footer class="footer-wrap">
-    
+
     <div class="container footer-content">
       <div class="footer-nav">
         <a href="#top">Top</a>
@@ -469,7 +466,6 @@
         <button type="button" class="works-cat-tab" data-works-tab="graphic">Graphic</button>
       </div>
 
-      <!-- Web作品 -->
       <div class="works-modal-grid" data-works-panel="web">
         <a href="work_oiseau.html" class="works-modal-item">
           <img src="assets/images/works_oiseau.webp" alt="L'Oiseau Bleu &amp; Beauty Art Curious" loading="lazy" decoding="async">
@@ -513,7 +509,6 @@
         </a>
       </div>
 
-      <!-- Graphic作品（あとで最大10個まで追加。今は大須のみ） -->
       <div class="works-modal-grid is-hidden" data-works-panel="graphic">
         <a href="work_soudankai.html" class="works-modal-item">
           <img src="assets/images/works_soudankai.webp" alt="デジタル相談会/チラシ" loading="lazy" decoding="async">
