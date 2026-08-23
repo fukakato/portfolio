@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* --------------------------------------------------------------------------
-     0-0. 「← 一覧に戻る」：直前に見ていたページへ戻る
-          同一サイト内から来た場合はブラウザバック（indexのWORKSモーダル /
-          works.html など、操作していたページに戻る）。
-          直接アクセスなどで戻り先が無い場合は href（works.html）へ。
-     -------------------------------------------------------------------------- */
   document.querySelectorAll('.back-link').forEach((link) => {
     link.addEventListener('click', (e) => {
       let sameSite = false;
@@ -17,13 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         history.back();
       }
-      // それ以外は href="works.html" のまま遷移（フォールバック）
+
     });
   });
 
-  /* --------------------------------------------------------------------------
-     0-1. 作品詳細ページ Process：めくれるスライド
-     -------------------------------------------------------------------------- */
   document.querySelectorAll('[data-slider]').forEach((slider) => {
     const track = slider.querySelector('.wd-slider-track');
     const slides = track ? track.querySelectorAll('.wd-slide') : [];
@@ -62,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(idx + (dx < 0 ? 1 : -1));
     }, { passive: true });
 
-    // キーボード操作
     slider.setAttribute('tabindex', '0');
     slider.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') go(idx - 1);
@@ -72,9 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     update();
   });
 
-  /* --------------------------------------------------------------------------
-     0. ハンバーガーメニュー開閉制御
-     -------------------------------------------------------------------------- */
   const openBtn01 = document.getElementById('openBtn01');
   const gNav = document.getElementById('g-nav');
 
@@ -93,21 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle('nav-open', isActive);
     });
 
-    // ナビ内リンクをクリックしたら自動でメニューを閉じる
     gNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeNav);
     });
 
-    // Escapeキーでも閉じられるように
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && gNav.classList.contains('active')) closeNav();
     });
   }
 
-
-  /* --------------------------------------------------------------------------
-     0-2. FVの羊/CLICK!バッジ → 作品一覧ポップアップ
-     -------------------------------------------------------------------------- */
   const worksModal = document.getElementById('worksModal');
 
   if (worksModal) {
@@ -117,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const openWorksModal = () => {
       worksModal.classList.add('active');
       worksModal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('nav-open'); // 背景スクロールを止める
+      document.body.classList.add('nav-open');
     };
 
     const closeWorksModal = () => {
@@ -135,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Web / Graphic タブ切り替え
     const modalTabs = worksModal.querySelectorAll('[data-works-tab]');
     const modalPanels = worksModal.querySelectorAll('[data-works-panel]');
     modalTabs.forEach(tab => {
@@ -147,10 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
-  /* --------------------------------------------------------------------------
-     A. スクロール時ふわっと浮かび上がる全体アニメーション (Intersection Observer)
-     -------------------------------------------------------------------------- */
   const fadeElements = document.querySelectorAll('.fade-in-up');
 
   if ('IntersectionObserver' in window) {
@@ -171,13 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeElements.forEach(el => el.classList.add('is-visible'));
   }
 
-
-  /* --------------------------------------------------------------------------
-     B. ABOUTの本めくり 3Dアニメーション
-        PC : 左右にめくる（CSSの rotateY）
-        SP : 上下にめくる（CSSの rotateX / style.css の 10-4 で切替）
-        JS側のロジックは共通のまま、スワイプ操作を追加
-     -------------------------------------------------------------------------- */
   const sheets = [
     document.getElementById('sheet-1'),
     document.getElementById('sheet-2'),
@@ -226,7 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (firstBtn) firstBtn.addEventListener('click', () => { while (currentSheetIdx > 0) flipPrev(); });
     if (lastBtn)  lastBtn.addEventListener('click', () => { while (currentSheetIdx < totalSheets - 1) flipNext(); });
 
-    // スマホ：本の上を左右にスワイプしてページ送り
     if (bookArea) {
       let touchStartX = 0;
       let touchStartY = 0;
@@ -239,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bookArea.addEventListener('touchend', (e) => {
         const dx = e.changedTouches[0].clientX - touchStartX;
         const dy = e.changedTouches[0].clientY - touchStartY;
-        // 縦スクロールと誤認しないよう、横移動が大きいときだけ反応
+
         if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
           if (dx < 0) flipNext();
           else flipPrev();
@@ -248,11 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-  /* --------------------------------------------------------------------------
-     B-2. ABOUT：レスポンシブ用スライドショー（めくらない仕様）
-          矢印・ドット・スワイプでページ送り。CSS 側で SP のみ表示。
-     -------------------------------------------------------------------------- */
   const aboutSlider = document.getElementById('aboutSlider');
   if (aboutSlider) {
     const track = document.getElementById('aboutSliderTrack');
@@ -280,7 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (nextArrow) nextArrow.addEventListener('click', () => goTo(idx + 1));
       dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
 
-      // スワイプ操作
       let sx = 0, sy = 0;
       aboutSlider.addEventListener('touchstart', (e) => {
         sx = e.changedTouches[0].clientX;
@@ -298,10 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-  /* --------------------------------------------------------------------------
-     C. SKILLタブ切り替えシステム
-     -------------------------------------------------------------------------- */
   const skillTabButtons = document.querySelectorAll('.skill-tab-btn');
   const skillListContainer = document.getElementById('skillList');
 
@@ -339,20 +297,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const skills = skillData[category] || [];
 
     skills.forEach((skill, idx) => {
-      const isWide = (skill.name === "Google Gemini"); // 横長ロゴのみ別スタイル
+      const isWide = (skill.name === "Google Gemini");
       const skillItem = document.createElement('div');
       skillItem.className = isWide ? 'skill-item skill-item-wide' : 'skill-item';
       skillItem.style.opacity = '0';
       skillItem.style.transform = 'translateY(10px)';
 
-      // 横長ロゴは潰れないように比率を維持（サイズはCSSのメディアクエリでも調整）
-      const imgStyle = isWide
-        ? 'width: 100%; max-width: 120px; height: auto; object-fit: contain; padding: 4px 0;'
-        : 'width: 50px; height: 50px; object-fit: contain;';
-
       skillItem.innerHTML = `
         <div class="skill-icon-svg">
-          <img src="${skill.icon}" alt="${skill.name} Icon" class="skill-icon-img" style="${imgStyle}">
+          <img src="${skill.icon}" alt="${skill.name} Icon" class="skill-icon-img">
         </div>
         <div class="skill-name">${skill.name}</div>
       `;
@@ -369,11 +322,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderSkills('graphic');
 
-
-  /* --------------------------------------------------------------------------
-     D. WORKS 一覧グリッド（Web / Graphic 切り替え）
-        カルーセルをやめ、カテゴリごとに全作品をグリッド表示する。
-     -------------------------------------------------------------------------- */
   const worksTrack = document.getElementById('worksTrack');
   const worksCatTabs = document.querySelectorAll('[data-works-cat]');
 
@@ -394,14 +342,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // 初期表示：アクティブなタブ（なければ web）で絞り込み
     const initialTab = document.querySelector('[data-works-cat].active');
     filterWorks(initialTab ? initialTab.dataset.worksCat : 'web');
   }
 
-  /* --------------------------------------------------------------------------
-     D-2. works.html 一覧ページの Web / Graphic 切り替え
-     -------------------------------------------------------------------------- */
   const worksPageGrid = document.querySelector('.works-page-grid');
   if (worksPageGrid) {
     const pageTabs = document.querySelectorAll('.works-page-container .works-cat-tab[data-works-cat]');
@@ -425,17 +369,12 @@ document.addEventListener("DOMContentLoaded", () => {
     filterPage(initPageTab ? initPageTab.dataset.worksCat : 'web');
   }
 
-
-  /* --------------------------------------------------------------------------
-     E. FV背景：星空を動的生成（画面幅に応じて数を調整）
-     -------------------------------------------------------------------------- */
   const starsContainer = document.querySelector('.fv-stars');
 
   const buildStars = () => {
     if (!starsContainer) return;
     starsContainer.innerHTML = '';
 
-    // 狭い画面では星の数を減らして描画負荷を下げる
     const w = window.innerWidth;
     const starCount = w < 600 ? 45 : (w < 1024 ? 60 : 80);
 
@@ -464,7 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buildStars();
 
-  // 画面の向きが変わったときだけ星を作り直す（幅の変化が大きい時のみ）
   let lastWidth = window.innerWidth;
   let starTimer;
   window.addEventListener('resize', () => {
@@ -477,10 +415,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   });
 
-
-  /* --------------------------------------------------------------------------
-     F. ABOUTページ：My Storyの横スクロール（PC用ドラッグ操作対応）
-     -------------------------------------------------------------------------- */
   const storyCarousel = document.getElementById('storyCarousel');
 
   if (storyCarousel) {
